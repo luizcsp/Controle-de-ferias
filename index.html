@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Férias</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <h1>Controle de Férias</h1>
+
+  <!-- Botão de modo escuro -->
+  <button id="darkModeButton">🌙</button>
+
+  <!-- Campo de pesquisa -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Pesquisar por nome, função ou data">
+    <button id="searchButton">Pesquisar</button>
+  </div>
+
+  <!-- Formulário de cadastro -->
+  <form id="employeeForm">
+    <input type="text" id="name" placeholder="Nome do Funcionário" required>
+    <div class="date-fields">
+      <input type="date" id="startDate" required>
+      <input type="date" id="endDate" required>
+    </div>
+    <input type="text" id="role" placeholder="Função" required>
+    <textarea id="notes" placeholder="Observações"></textarea>
+    <button type="submit">Cadastrar Funcionário</button>
+  </form>
+
+  <!-- Tabela de funcionários -->
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Início</th>
+        <th>Término</th>
+        <th>Função</th>
+        <th>Dias Restantes</th>
+        <th>Observações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Botões de ação -->
+  <div class="actions">
+    <button id="importButton">Importar Dados</button>
+    <button id="exportButton">Exportar Dados</button>
+    <button id="clearButton">Limpar Tudo</button>
+    <input type="file" id="importFile" style="display: none;" />
+  </div>
+
+  <!-- Modal de senha -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Digite a senha</h2>
+      <input type="password" id="passwordInput" placeholder="Senha">
+      <button id="confirmPassword">Confirmar</button>
+    </div>
+  </div>
+
+  <!-- Informação de direitos autorais -->
+  <footer>
+    <p>&copy; 2023 Luiz C S Paula. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

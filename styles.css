@@ -1,0 +1,200 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.date-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.date-fields input {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Botão de modo escuro */
+#darkModeButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#darkModeButton:hover {
+  color: #007bff;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode button,
+body.dark-mode .modal-content {
+  background-color: #333;
+  color: #f9f9f9;
+  border-color: #555;
+}
+
+body.dark-mode table {
+  border-color: #555;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border-color: #555;
+  color: #f9f9f9; /* Cor do texto da tabela no modo escuro */
+  font-weight: bold; /* Texto em negrito para maior visibilidade */
+}
+
+body.dark-mode footer {
+  color: #aaa;
+}
+
+body.dark-mode #darkModeButton {
+  color: #f9f9f9;
+}
+
+body.dark-mode #darkModeButton:hover {
+  color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .date-fields {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
